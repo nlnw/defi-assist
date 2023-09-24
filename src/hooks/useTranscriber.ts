@@ -1,6 +1,7 @@
 import { useCallback, useMemo, useState } from "react";
 import { useWorker } from "./useWorker";
 import Constants from "../utils/Constants";
+import { handleAction } from "../utils/ActionsHandler";
 
 interface ProgressItem {
     file: string;
@@ -96,7 +97,7 @@ export function useTranscriber(): Transcriber {
                     text: completeMessage.data.text,
                     chunks: completeMessage.data.chunks,
                 });
-                alert(completeMessage.data.text);
+                handleAction(completeMessage.data.text);
                 setIsBusy(false);
                 break;
 
