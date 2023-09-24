@@ -7,6 +7,7 @@
         "deploy": "tsc && vite build && wrangler pages deploy dist --project-name defi-assistant --commit-dirty true -e main"
     },
     "dependencies": {
+        "@metamask/sdk-react": "^0.7.0",
         "@xenova/transformers": "^2.6.1",
         "axios": "^1.5.0",
         "react": "^18.2.0",
